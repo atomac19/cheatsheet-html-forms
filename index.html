@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cheat Sheet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<h1>HTML Forms</h1>
+<h2>Form Tags</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Name</th>
+      <th>Attributs</th>
+      <th>Values</th>
+      <th>Description</th>
+      <th>Tip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- This section documents the form tag and its attributes -->
+    <tr>
+      <td rowspan="9" class="element">&lt;form&gt;</td>
+      <td rowspan="9">Form</td>
+      <td>action, method, autocomplete, target, name, rel, enctype, accept-charset, novalidate</td>
+      <td></td>
+      <td>The wrapper element for all different types of input elements.</td>
+      <td></td>
+    </tr>
+    <!-- This section documents form attribut action -->
+    <tr>
+      <td>action</td>
+      <td class="element">&lt;form action="/action_page.php"&gt;</td>
+      <td>Defines the action to be performed when the form is submitted. Usually, the form data is sent to a file on the server when the user clicks on the submit button.</td>
+      <td>If the action attribute is omitted, the action is set to the current page.</td>
+    </tr>
+    <!-- This section documents form attribut method -->
+    <tr>
+      <td>method</td>
+      <td class="element">&lt;form action="/action_page.php" method="get"&gt;
+        <br><br>
+        &lt;form action="/action_page.php" method="post"&gt;
+      </td>
+      <td>Specifies the HTTP method to be used when submitting the form data. The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").</td>
+      <td>The default HTTP method when submitting form data is GET. NEVER use GET to send sensitive data!</td>
+      </tr>
+      <!-- This section documents form attribut autocomplete -->
+    <tr>
+      <td>autocomplete</td>
+      <td class="element">&lt;form action="/action_page.php" autocomplete="on"&gt;</td>
+      <td>Specifies whether a form should have autocomplete on or off.</td>
+      <td>When autocomplete is on, the browser automatically complete values based on values that the user has entered before.</td>
+    </tr>
+    <!-- This section documents form attribut target -->
+    <tr>
+      <td>target</td>
+      <td class="element">&lt;form action="/action_page.php" target="<strong>_self"&gt;</strong></td>
+      <td>Specifies where to display the response that is received after submitting the form.</td>
+      <td>The default value is _self which means that the response will open in the current window.</td> 
+    </tr>
+     <tr>
+      <td></td>
+      <td class="element">target="<strong>_blank"</strong></td>
+      <td>The response is displayed in a new window or tab.</td>
+      <td></td> 
+    </tr>
+    <tr>
+      <td></td>
+      <td class="element">target="<strong>_parent"</strong></td>
+      <td>The response is displayed in the parent frame.</td>
+      <td></td> 
+    </tr>
+    <tr>
+      <td></td>
+      <td class="element">target="<strong>_top"</strong></td>
+      <td>The response is displayed in the full body of the window.</td>
+      <td></td> 
+    </tr>
+    <tr>
+      <td></td>
+      <td class="element">target="<strong><i>framename"</i></strong></td>
+      <td>The response is displayed in a named iframe.</td>
+      <td></td> 
+    </tr>
+    <!-- This section documents tag fieldset and legend -->
+    <tr>
+      <td class="element">&lt;fieldset&gt;<br>
+          &lt;legend&gt;
+      </td>
+      <td>Fieldset<br>Legend</td>
+      <td></td>
+      <td class="element">&lt;fieldset&gt;<br>
+          &lt;legend&gt;Personal data:&lt;/legend&gt;<br>
+          &lt;/fieldset&gt;
+      </td>
+      <td>The fieldset element is used to group related data in a form. The legend element defines a caption for the fieldset element</td>
+      <td></td>
+    </tr>
+    <!-- This section documents tag input -->
+    <tr>
+      <td rowspan="17" class="element">&lt;input&gt;</td>
+      <td rowspan="17">Input</td>
+      <td rowspan="13">type</td>
+      <td>button, checkbox, placeholder, autofocus, autocomplete, high, width, list, color, date, datetime-local, email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text, time, url, week</td>
+      <td>The input element can be displayed in several ways, depending on the type attribute.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="text"&gt;</td>
+      <td>Defines a single-line text input field.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="password"&gt;</td>
+      <td>Defines a single-line text input field.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="submit"&gt;</td>
+      <td>Defines a button for submitting form data to a form-handler. The form-handler is typically a server page with a script for processing input data.</td>
+      <td>The form-handler is specified in the form's action attribute</td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="reset"&gt;</td>
+      <td>Defines a reset button that will reset all form values to their default values.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="radio"&gt;</td>
+      <td>Radio buttons let a user select ONLY ONE of a limited number of choices:.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="checkbox"&gt;</td>
+      <td>Checkboxes let a user select ZERO or MORE options of a limited number of choices.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="button"&gt;</td>
+      <td>Defines a button.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="email"&gt;</td>
+      <td>The Input Type Email is used for input fields that should contain an e-mail address.</td>
+      <td>Depending on browser support, the e-mail address can be automatically validated when submitted.</td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="image"&gt;</td>
+      <td>Defines an image as a submit button. The path to the image is specified in the src attribute.</td>
+      <td class="element">&lt;input type="image" src="img_submit.gif" alt="Submit" width="48" height="48"&gt;</td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="file"&gt;</td>
+      <td>Defines a file-select field and a "Browse" button for file uploads.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="number"&gt;</td>
+      <td>Defines a numeric input field. I can also set restrictions on what numbers are accepted.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="element">&lt;input type="range"&gt;</td>
+      <td>defines a control for entering a number whose exact value is not important (like a slider control).</td>
+      <td>Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, and step attributes.</td>
+    </tr>
+    <tr>
+      <td class="element">checked</td>
+      <td></td>
+      <td>Specifies that an input field should be pre-selected when the page loads.</td>
+      <td>For type="checkbox" or type="radio".</td>
+    </tr>
+    <tr>
+      <td class="element">required</td>
+      <td></td>
+      <td>Specifies that an input field is required.</td>
+      <td>Must be filled out.</td>
+    </tr>
+    <tr>
+      <td class="element">value</td>
+      <td></td>
+      <td>Specifies the default value for an input field.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="element">size</td>
+      <td></td>
+      <td>Specifies the width (in characters) of an input field.</td>
+      <td></td>
+    </tr>
+    <!-- This section documents tag label -->
+    <tr>
+      <td class="element">&lt;label&gt;</td>
+      <td>Label</td>
+      <td>for</td>
+      <td class="element">&lt;label for="..."&gt;</td>
+      <td>Defines a label for several form elements. The for attribute of the label tag should be equal to the id attribute of the input element to bind them together.</td>
+      <td>The label element is useful for screen-reader users. The label element also help users who have difficulty clicking on very small regions (such as radio buttons) - because when the user clicks the text within the label element, it toggles the radio button/checkbox.</td>
+    </tr>
+    <!-- This section documents tag select -->
+    <tr>
+      <td class="element">&lt;select&gt;<br>
+          &lt;option&gt;
+      </td>
+      <td>Drop-down list</td>
+      <td>id, name, size, value, selected, multiple</td>
+      <td class="element">&lt;select id="..." name="..." size="2" multiple&gt;<br>
+          &lt;option value="1"&gt;1&lt;/option&gt;<br>
+          &lt;option value="2" selected &gt;2&lt;/option&gt;<br>
+          &lt;/select&gt;
+      </td>
+      <td>The select element defines a drop-down list. The option element defines an option that can be selected. To define a pre-selected option, add the selected attribute to the option.</td>
+      <td>By default, the first item in the drop-down list is selected. Use the size attribute to specify the number of visible values. Use the multiple attribute to allow the user to select more than one value.</td>
+    </tr>
+    <!-- This section documents tag textarea -->
+    <tr>
+      <td class="element">&lt;textarea&gt;</td>
+      <td>Textarea</td>
+      <td>name, rows, cols</td>
+      <td class="element">&lt;textarea name="..." rows="2" cols="5"&gt;<br>
+          Multi-line input field
+          &lt;/textarea&gt;
+      </td>
+      <td>The element defines a multi-line input field (a text area).</td>
+      <td></td>
+    </tr>
+    <!-- This section documents tag button -->
+    <tr>
+      <td class="element">&lt;button&gt;</td>
+      <td>Button</td>
+      <td>type, onclick</td>
+      <td class="element">&lt;button type="button" onclick="alert('Hello')"&gt;Click Me!&lt;/button&gt;
+      </td>
+      <td>The element defines a clickable button.</td>
+      <td></td>
+    </tr>
+    <!-- This section documents tag datalist -->
+    <tr>
+      <td class="element">&lt;datalist&gt;</td>
+      <td>Data list</td>
+      <td>list, id, value</td>
+      <td class="element">
+        &lt;input list="browsers"&gt;<br>
+        &lt;datalist id="browser"&gt;<br>
+        &lt;option value="Edge" "&gt;<br>
+        &lt;option value="Opera" "&gt;<br>
+        &lt;/datalist&gt;
+      </td>
+      <td>The element specifies a list of pre-defined options for an input element. Users will see a drop-down list of the pre-defined options as they input data.</td>
+      <td>The list attribute of the input element, must refer to the id attribute of the datalist element.</td>
+    </tr>
+    <!-- This section documents tag optgroup -->
+    <tr>
+      <td class="element">&lt;optgroup&gt;</td>
+      <td>Option-group</td>
+      <td>global, event, disabled, label</td>
+      <td></td>
+      <td>Defines a group of related options in a drop-down list.</td>
+      <td>If you have a long list of options, groups of related options are easier to handle for a user.</td>
+    </tr>
+    <!-- This section documents tag output -->
+    <tr>
+      <td class="element">&lt;output&gt;</td>
+      <td>Output</td>
+      <td>disabled<br> label</td>
+      <td>disabled<br> text</td>
+      <td>Defines the result of a calculation. Disabled specifies that an option-group should be disabled. Label specifies a label for an option-group.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
