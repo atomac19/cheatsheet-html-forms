@@ -1,0 +1,40 @@
+body {
+  background-color: darkslategray;
+  color: salmon;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+table {
+  border: 2px double darkslategray;
+}
+
+tr {
+  background-color: darkslategray;
+  color: antiquewhite;
+  text-align: center;
+  font-size: 14px;
+  padding: 7px;
+  
+}
+
+th {
+  background-color: salmon;
+  color: black;
+  font-weight: 900;
+}
+
+td {
+  border: 1px solid salmon;
+}
+
+.element {
+  font-family: monospace;
+  color: salmon;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 7px;
+}
