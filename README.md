@@ -1,4 +1,4 @@
-# Cheatsheet-html-forms
+# Cheatsheet for HTML Forms
 Project 
 ## My Cheatsheet project for HTML Forms
 Description
